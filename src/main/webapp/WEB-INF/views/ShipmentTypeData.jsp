@@ -20,7 +20,7 @@
 				<th>MODE</th>
 				<th>ENABLE</th>
 				<th>NOTE</th>
-				<th colspan="2">OPERATION</th>
+				<th colspan="3">OPERATION</th>
 			</tr>
 		<c:forEach items="${list}" var="ob">
 			<tr>
@@ -32,6 +32,7 @@
 				<td>${ob.description}</td>
 				<td><a href="delete?sid=${ob.shipId}">DELETE</a></td>
 				<td><a href="edit?sid=${ob.shipId}">EDIT</a></td>
+				<td><a href="view?sid=${ob.shipId}">VIEW</a></td>
 			</tr>
 			
 		</c:forEach>

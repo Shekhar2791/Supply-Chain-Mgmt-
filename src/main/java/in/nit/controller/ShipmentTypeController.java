@@ -82,4 +82,13 @@ public class ShipmentTypeController {
 		return "ShipmentTypeData";
 		
 	}
+	
+	//View single form data
+	@RequestMapping(value="/view")
+	public String showOneShipment(@RequestParam("sid")Integer id,Model model) {
+		ShipmentType st=service.getOneShipmentType(id);
+		model.addAttribute("ob", st);
+		 return "ShipmentTypeView";
+		
+	}
 }

@@ -36,6 +36,7 @@ public class ShipmentTypeServiceImpl implements IShipmentTypeService{
 		dao.deleteShipmentType(id);
 	}
 	
+	//6.View single form data
 	@Override
 	@Transactional(readOnly=true)
 	public ShipmentType getOneShipmentType(Integer id) {

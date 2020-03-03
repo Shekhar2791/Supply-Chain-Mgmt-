@@ -15,9 +15,11 @@ public interface IShipmentTypeDao {
 	//3.Delete data from form display
 	public void deleteShipmentType(Integer id);
 	
-	//4.Edit form data
+	//4.Edit form data //6.View single form data
 	ShipmentType getOneShipmentType(Integer id);
 	
 	//5.Update form data using Edit
 	void updateShipmentType(ShipmentType ob);
+	
+	
 }

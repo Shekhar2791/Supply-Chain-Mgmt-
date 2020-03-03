@@ -13,7 +13,7 @@ public interface IShipmentTypeService {
 	//2.Delete data from form display
 		public void deleteShipmentType(Integer id);
 		
-	//3.Edit form data
+	//3.Edit form data //5.View single form data
 		ShipmentType getOneShipmentType(Integer id);
 		
 	//4.Update form data using Edit
