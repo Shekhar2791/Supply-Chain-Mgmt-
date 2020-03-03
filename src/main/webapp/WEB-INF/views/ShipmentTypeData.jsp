@@ -20,6 +20,7 @@
 				<th>MODE</th>
 				<th>ENABLE</th>
 				<th>NOTE</th>
+				<th colspan="2">OPERATION</th>
 			</tr>
 		<c:forEach items="${list}" var="ob">
 			<tr>
@@ -29,7 +30,10 @@
 				<td>${ob.enableShipment}</td>
 				<td>${ob.shipGrade}</td>
 				<td>${ob.description}</td>
+				<td><a href="delete?sid=${ob.shipId}">DELETE</a></td>
+				<td><a href="edit?sid=${ob.shipId}">EDIT</a></td>
 			</tr>
+			
 		</c:forEach>
 		</table>	
 		</c:when>

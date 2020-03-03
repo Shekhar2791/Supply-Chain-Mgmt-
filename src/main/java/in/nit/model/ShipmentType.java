@@ -28,6 +28,12 @@ public class ShipmentType {
 	public ShipmentType() {
 		super();
 	}
+	
+	public ShipmentType(Integer shipId) {
+		super();
+		this.shipId = shipId;
+	}
+
 	public Integer getShipId() {
 		return shipId;
 	}

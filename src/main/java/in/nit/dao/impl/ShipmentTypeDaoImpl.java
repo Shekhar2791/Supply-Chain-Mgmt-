@@ -18,9 +18,28 @@ public class ShipmentTypeDaoImpl implements IShipmentTypeDao{
 	public Integer saveShipmentType(ShipmentType ob) {
 		return (Integer)ht.save(ob);
 	}
-
-	@Override //Implement method for fetching data from DB to UI
+	
+	//Implement method for fetching data from DB to UI
+	@Override 
 	public List<ShipmentType> getAllShipmentTypes() {
 		return ht.loadAll(ShipmentType.class);
+	}
+	
+	//Implement method for deleting data from DB to UI
+	@Override
+	public void deleteShipmentType(Integer id) {
+		 ht.delete(new ShipmentType(id));
+	}
+	
+	//Implement method for editing data from DB to UI(form backing object)
+	@Override
+	public ShipmentType getOneShipmentType(Integer id) {
+		return ht.get(ShipmentType.class, id);
+	}
+	
+	//Update form data after Update
+	@Override
+	public void updateShipmentType(ShipmentType ob) {
+		ht.update(ob);
 	}
 }

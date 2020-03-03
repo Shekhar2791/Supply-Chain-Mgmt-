@@ -22,11 +22,30 @@ public class ShipmentTypeServiceImpl implements IShipmentTypeService{
 			return dao.saveShipmentType(ob);
 		}
 	
-	@Override //implement method in serviceImpl to fetch data fro DB to UI 
+	//Implement method for fetching data from DB to UI
+	@Override 
 	public List<ShipmentType> getAllShipmentTypes() {
 		List<ShipmentType> list= dao.getAllShipmentTypes();
 		Collections.sort(list,(o1,o2)->o1.getShipId()-o2.getShipId());
 		return list ;		
 	}
 
+	@Override
+	@Transactional
+	public void deleteShipmentType(Integer id) {
+		dao.deleteShipmentType(id);
+	}
+	
+	@Override
+	@Transactional(readOnly=true)
+	public ShipmentType getOneShipmentType(Integer id) {
+		return dao.getOneShipmentType(id);
+	}
+	
+	//Update DB after Edit 
+	@Override
+	@Transactional
+	public void updateShipmentType(ShipmentType ob) {
+		dao.updateShipmentType(ob);
+	}
 }
